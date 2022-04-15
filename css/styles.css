@@ -13,6 +13,8 @@
     --footer-color:#2F303A;
     --border-one: #ECECEC;
     --border-two: #EEEEEE;
+    --soc-icon: #AFB1B8;
+
     
 }
 li{
@@ -94,6 +96,7 @@ display: flex;
     text-align: center;
     padding-bottom: 200px;
     padding-top: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero-img.png);
 }
 .hero-text {
     
@@ -213,9 +216,39 @@ display: block;
 }
 .card-content{
     background-color: var(--main-background);
-    padding: 30px 32px 30px 32px;
+    padding: 30px 32px 16px 32px;
     
 }
+.team-soc-list{
+display: flex;
+justify-content: center;
+}
+
+.team-soc-item{
+
+}
+.team-soc-link{
+width: 44px;
+height: 44px;
+border-radius: 50%;
+display: flex;
+background-color: var(--main-background);
+margin-bottom: 30px;
+align-items: center;
+justify-content: center;
+fill: var(--soc-icon);
+
+}
+.team-soc-item + .team-soc-item{
+    margin-left: 10px;
+}
+
+.team-soc-link:hover, .team-soc-link:focus{
+    background-color: var(--accent-color);
+    fill: var(--white-text);
+}
+
+
 
 .team-member {
     font-weight: 500;
@@ -242,6 +275,7 @@ text-align: center;
 letter-spacing: 0.03em;
 
 color: var(--title-text);
+padding-bottom: 16px;
 
 
 
