@@ -14,6 +14,7 @@
     --border-one: #ECECEC;
     --border-two: #EEEEEE;
     --soc-icon: #AFB1B8;
+    --soc-footer-background: rgba(255, 255, 255, 0.1);
 
     
 }
@@ -75,6 +76,7 @@ display: flex;
 .link:hover,
 .link:focus{
     color: var(--accent-color);
+    
 }
 
 .visually-hidden {
@@ -163,19 +165,78 @@ letter-spacing: 0.03em;
 color: var(--title-name);
 margin-bottom: 50px;
 }
-.features-text{
+
+.features-icons{
     display: flex;
     
+
+}
+.features-icons-item{
+    display: flex;
+    width: 270px;
+    height: 120px;
+    background-color: var(--team-backround);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+      
+}
+
+
+
+.features-icons-item + .features-icons-item{
+    margin-left: 30px;
+}
+
+
+.clients-icons{
+    display: flex;
+    
+
+}
+.clients-icons-item{ 
    
-   
+      
+}
+.client-link{
+    
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--soc-icon);
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+    align-items: center;
+    justify-content: center;
+    fill: var(--soc-icon);
+}
+.client-link:hover, .client-link:focus{
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+
+
+
+.clients-icons-item + .clients-icons-item{
+    margin-left: 30px;
+}
+
+.features-text{
+    display: flex;
 }
 
 .features-text li{
     display: block;
     width: 270px;
     
-    
+       
 }
+
+
+
 .features-text-margin + .features-text-margin { 
     
     margin-left: 30px;
@@ -248,6 +309,35 @@ fill: var(--soc-icon);
     fill: var(--white-text);
 }
 
+.soc-list-footer{
+    display: flex;
+    
+    }
+    
+    .soc-item-footer{
+    
+    }
+    .soc-link-footer{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--soc-footer-background);
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    fill: var(--white-logo);
+    
+    }
+    .soc-item-footer + .soc-item-footer{
+        margin-left: 10px;
+    }
+    
+    .soc-link-footer:hover, .soc-link-footer:focus{
+        background-color: var(--accent-color);
+        fill: var(--white-text);
+    }
+
 
 
 .team-member {
@@ -301,6 +391,7 @@ margin-left: 30px;
 }
 
 
+
 /*--------- portfolio -----------*/
 
 .header {
@@ -310,19 +401,36 @@ margin-left: 30px;
     
 }
 
-nav{
+.nav{
 display: flex;
+margin-right: auto;
 }
 .site-nav{
     display: flex;
-    margin-right: 331px;
+    
     
 }
 
-.contacts-nav{
+.contacts-nav {
     display: flex;
+   
     
     
+}
+
+.mail, .phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contacts-nav :hover{
+    fill: var(--accent-color);
+
+}
+.mail-icon, .phone-icon{
+    margin-right: 10px;
     
 }
 
@@ -363,7 +471,7 @@ display: flex;
    
 }
 .logo-footer{
-    display: block;
+    display: flex;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -406,17 +514,21 @@ display: flex;
     
     color: var(--title-text);
     display: flex;
+    fill: var(--title-text);
 
 }
 .header-contacts a:not(:last-child){
     margin-right: 50px;
 }
+
 .header-contacts{
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 
 }
+
+
 .main {
     background: var(--main-background);
 }
@@ -534,6 +646,26 @@ color: var(--title-text);
 
 
 }
+
+
+.soc-footer-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: var(--white-text);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.soc-footer{
+    display: block;
+}
+
+
+
 .footer {
     background: var(--footer-color);
     padding-bottom: 60px;
@@ -562,4 +694,14 @@ color: var(--white-text);
 }
 .footer-items:not(:last-child){
     margin-bottom: 9px;
+}
+
+.footers{
+    display: flex;
+}
+.footer-one{
+    margin-right: 70px;
+}
+.footer-two{
+    padding-top: 15px;
 }
