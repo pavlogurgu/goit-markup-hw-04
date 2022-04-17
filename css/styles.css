@@ -99,6 +99,7 @@ display: flex;
     padding-bottom: 200px;
     padding-top: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero-img.png);
+    width: 1600px;
 }
 .hero-text {
     
@@ -225,17 +226,22 @@ margin-bottom: 50px;
 }
 
 .features-text{
-    display: flex;
+    display: block;
 }
 
 .features-text li{
-    display: block;
+    display: flex;
     width: 270px;
     
        
 }
 
-
+.features-text-below{
+    display: flex;
+}
+.features-text-below li{
+    display: block;
+}
 
 .features-text-margin + .features-text-margin { 
     
@@ -277,7 +283,7 @@ display: block;
 }
 .card-content{
     background-color: var(--main-background);
-    padding: 30px 32px 16px 32px;
+    padding: 30px 32px 30px 32px;
     
 }
 .team-soc-list{
@@ -294,7 +300,7 @@ height: 44px;
 border-radius: 50%;
 display: flex;
 background-color: var(--main-background);
-margin-bottom: 30px;
+
 align-items: center;
 justify-content: center;
 fill: var(--soc-icon);
@@ -323,7 +329,7 @@ fill: var(--soc-icon);
     border-radius: 50%;
     display: flex;
     background-color: var(--soc-footer-background);
-    margin-bottom: 30px;
+    
     align-items: center;
     justify-content: center;
     fill: var(--white-logo);
@@ -335,7 +341,7 @@ fill: var(--soc-icon);
     
     .soc-link-footer:hover, .soc-link-footer:focus{
         background-color: var(--accent-color);
-        fill: var(--white-text);
+        
     }
 
 
@@ -365,7 +371,7 @@ text-align: center;
 letter-spacing: 0.03em;
 
 color: var(--title-text);
-padding-bottom: 16px;
+margin-bottom: 16px;
 
 
 
@@ -413,19 +419,14 @@ margin-right: auto;
 
 .contacts-nav {
     display: flex;
-   
-    
-    
-}
-
-.mail, .phone{
-    display: flex;
     align-items: center;
-    justify-content: center;
-
+    
+    
 }
 
-.contacts-nav :hover{
+
+
+.contacts-nav :hover, .contacts-nav:focus{
     fill: var(--accent-color);
 
 }
@@ -505,6 +506,10 @@ margin-right: auto;
   
     border-bottom: 1px solid var(--border-one);
 }
+.header-contacts:hover, .header-contacts:focus{
+    fill: var(--accent-color);
+}
+
 .header-contacts {
 
     font-weight: 500;
@@ -568,6 +573,7 @@ padding: 6px 22px 6px 22px;
 .button-selected{
 color: var(--white-text);
 background-color: var(--accent-color);
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -575,6 +581,7 @@ background-color: var(--accent-color);
 .button:focus{
     background-color: var(--accent-color);
     color: var(--white-text);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-content{
@@ -599,9 +606,15 @@ background-color: var(--accent-color);
     margin-left: 30px;
     margin-top: 30px;
 }
-.portfolio-item{
-    
+.portfolio-item a{
+    text-decoration: none;
+    font-style: normal;
 }
+.portfolio-item:hover, .portfolio-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
 
 .portfolio-img{
    
@@ -698,10 +711,11 @@ color: var(--white-text);
 
 .footers{
     display: flex;
+    align-items: baseline;
 }
 .footer-one{
     margin-right: 70px;
 }
 .footer-two{
-    padding-top: 15px;
+    
 }
